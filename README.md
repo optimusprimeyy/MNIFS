@@ -9,7 +9,7 @@ You can run MNIFS.py:
 if __name__ == "__main__":
      # Import data
     Example = loadmat('Example.mat')
-    trandata = np.array(Example['Example'])[:,:-1]
+    trandata = np.array(Example['Example'])
 
     # Normalization process
     min_max_scaler = preprocessing.MinMaxScaler()
