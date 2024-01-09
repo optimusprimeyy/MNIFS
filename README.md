@@ -11,9 +11,9 @@ if __name__ == "__main__":
     Example = loadmat('Example.mat')
     trandata = np.array(Example['Example'])
 
-    # Normalization process for nominal data
+    # Normalization process for numerical data
     min_max_scaler = preprocessing.MinMaxScaler()
-    trandata[:, 2:4] = min_max_scaler.fit_transform(trandata[:, 2:4])
+    trandata[:, 0:2] = min_max_scaler.fit_transform(trandata[:, 0:2])
 
     # Set the threshold lammda
     lammda = 1
@@ -23,7 +23,7 @@ if __name__ == "__main__":
 ```
 You can get outputs as follows:
 ```
-feature_seq = [2, 0, 3, 1]
+feature_seq = [0, 1, 3, 2]
 ```
 
 ## Citation
